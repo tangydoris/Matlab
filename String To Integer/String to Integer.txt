@@ -1,0 +1,22 @@
+﻿String To Integer
+
+Problem 1
+Write a function that works like the built-in Matlab function num2str, assuming that the second input argument specifying the total number of signiﬁcant digits is used.
+The function must return a string representing, in ﬁxed-point format, a given input num- ber. The number may be positive or negative. The total number of signiﬁcant digits shown is speciﬁed by an input argument of the function. In other words, if x is the given number, and n is the number of signiﬁcant digits wanted (assumed <= 16), then the function produces the same output as num2str(x,n) to within rounding errors. Your result may be oﬀ by one unit in the last digit since we are not supposed to round that out here.
+In Matlab, if the number is very small, then num2str gives a string representing the number expressed in scientiﬁc notation. Thus the number is assumed to be not too small here. The num2str function also works for matrices. However, we assume here that the input number is a scalar.
+The entire function must be written using only scalar operations. Of course the function num2str cannot be used.
+Then write a script program to run and test the above function with numbers that are positive or negative, and are greater than or smaller than 1. Check visually the output results with those produced by num2str.
+The ﬁrst thing for you to do is to write a script to try to read all the digits (while ignoring the sign of the number as well as the decimal point) and store them sequentially in a vector.
+Here are some ideas that may help you solve the problem.
+- Note the sign of the given number. But work with its absolute value in all subsequent manipulations. The sign of the number can be taken cared of separately.
+- You need to ﬁnd the location of the decimal point in the ﬁx-point representation of the number with the help of the function log10 (logarithm to base 10) and truncation.
+- Other than the possibility of a sign, numbers whose absolute magnitude is larger than 1 are represented as ddd.nnn. The number of ds can be 1,2,.... While those less than 1 are represented as 0.ddd..., with a certain number of leading d’s possibly given by zeroes. 
+- Read all the digits appearing in the number (except leading zeroes) and store them in a numerical vector. 
+- To produce a string representing the given number, start with the sign of the number if it is negative. 
+- The cases where the magnitude of the number is greater than or smaller than 1 must be treated separately. 
+- After the script is working correctly then separate it to form a function and a script program as required.
+Assuming that the number of signiﬁcant digits wanted is 16, you should have the following results.
+For x = 1e2*pi, the resulting string is 314.1592653589793.
+For x = -1e2*pi, the resulting string is -314.1592653589793.
+For x = 1e-3*pi, the resulting string is 0.003141592653589793.
+For x = -1e-3*pi, the resulting string is -0.003141592653589793.

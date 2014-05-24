@@ -1,0 +1,12 @@
+﻿Probability Trials
+
+Problem 1
+In this problem we deal only with squares that are oriented with their sides either parallel to the x- or the y-axis. First we have a unit square with its lower left-hand corner located at the origin. Within this bounding square we want to generate smaller squares with random locations and sizes. However each one of them must lie completely within the bounding square.
+Here each of these smaller squares is generated in the following way. To generate such a square, ﬁrst a point is chosen within the bounding square at random in an unbiased way to be its geometric center. Then its size is picked at random with the provision that it lies completely within the bounding square.
+Perform a larger number of simulations to ﬁnd the average size of these smaller squares. Compute also their average area. Here the size of a square refers to the length of one of it sides.
+For the mathematically inclined students, this problem can be solved exactly using integral calculus. Unfortunately, to the best of my knowledge, this type of problem is not found in your normal calculus class. In any case you are not required to perform the exact calculation here.
+
+left and right of the bounding square are given respectively by x and 1−x, and from the top and bottom of the bounding square by y and 1−y. In this particular case, it turns out that the center lies closer to the right of the bounding square. Thus the maximum size for a smaller square with that position is given by 1−x.
+
+Problem 2
+When n number of dice are throw, ﬁnd the probability that there is exactly one odd number or there is at least a six. Get an accurate estimate for this probability by performing a large number of simulations. In this problem the user must enter the total number of dice from the keyboard during runtime.

@@ -1,0 +1,63 @@
+﻿Mousetrap
+
+Problem 1
+The following permutation problem invented and named ”Mousetrap” by A. Cayley is still pretty much an open mathematical problem. The problem is taken directly from http://mathworld.wolfram.com/Mousetrap.html.
+Let the numbers 1,2,...,n be written on a set of cards, and shuﬄe this deck of cards. Now, start counting using the top card. If the card chosen does not equal the count, move it to the bottom of the deck and continue counting forward. If the card chosen does equal the count, discard the chosen card and begin counting again at 1. The game is won if all cards are discarded, and lost if the count reaches n+1, where n is the original number of cards.
+Your must create and use two functions separately to handle the following two situations:
+1. to process the situation when a match is not found
+2. to process the situation when a match is found
+You must also write a script program (the main program) to call these two function to simulate playing this game. Running one simulation at a time here. Thus do not simulate this game multiple times.
+Assume that the original number of cards is given by n = 5. To produce a row vector containing the integers from 1 to n in a random order, the Matlab function randperm can be used.
+For example to simulate shuﬄing 5 cards, one can use the statement
+Cards = randperm(5)
+For example, in one run it may produce the vector [ 4 2 1 5 3 ], and in another run it may give [ 2 5 1 4 3]. In general randperm(n) produces a row vector containing a random permutation of the number from 1 to n.
+Your program must run until either the player win or lose.
+
+The following are the results of 4 diﬀerent runs. Examples of the output results which you need to produce with your program are shown below. The ﬁrst column displays the current count. The other columns show the value of each of the remaining cards. The discarded cards are not shown.
+
+(1)
+1 5 3 4 1 2 
+2 3 4 1 2 5 
+3 4 1 2 5 3 
+4 1 2 5 3 4 
+5 2 5 3 4 1 
+6 5 3 4 1 2 
+You lose!
+
+(2)
+1 2 4 3 5 1 
+2 4 3 5 1 2 
+3 3 5 1 2 4 
+1 5 1 2 4 
+2 1 2 4 5 
+3 2 4 5 1 
+4 4 5 1 2 
+1 5 1 2 
+2 1 2 5 
+3 2 5 1 
+4 5 1 2 
+5 1 2 5 
+6 2 5 1 
+You lose!
+
+(3)
+1 2 5 3 1 4 
+2 5 3 1 4 2 
+3 3 1 4 2 5 
+1 1 4 2 5 
+1 4 2 5
+2 2 5 4 
+1 5 4 
+2 4 5 
+3 5 4 
+4 4 5 
+1 5 
+2 5 
+3 5 
+4 5 
+5 5 
+1
+You win!
+
+
+

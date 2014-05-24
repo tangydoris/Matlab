@@ -1,0 +1,38 @@
+﻿Problem 1 [50 pts]
+This problem is loosely based on the pricing model of a small South Paciﬁc air carrier, Samoa Air, which charges customers according to the sum of their body weight and the total weight of all baggage items.
+Samoa Air oﬀers only two possible routes: between Apia and Asau, and between Apia and Salelologa.
+You must use the menu command to choose the route that you want. There is a program in Lecture 13 that illustrates how the menu command can be used by the user to select a number of diﬀerent choices.
+The price of a ticket is a sum of two parts. Part 1 is based on a ﬂat fee of 20 tala charged for each passenger to be included on this ticket. Part 2 is computed based on the sum of the total weight of those passengers and the total weight of all baggage items, averaged by the total number of passengers on this ticket.
+All passengers on the same ticket are weighted together with all the baggage items to obtain the total weight, which is then divided by the number of passengers to obtain the average weight, w. This average weight w is then multiplied by a rate r to obtain the averaged weight portion of the ticket price per passenger. The full ticket price is then obtained by multiplying the ticket price per passenger by the number of passengers.
+For route 1, r is given by rA (= 1 tala/Kg) for an averaged weight w of up to wA (= 60 Kg). For w between wA and wB (= 100 Kg), the portion of the averaged weight in excess of wA is charged at the rate rB (= 1.6 tala/Kg). For w higher than wB, the portion of the averaged weight in excess of wB is charged at the rate of rC (= 2.2 tala/Kg). All these rates are multiplied by a scale factor f that reﬂects the ﬂight distance of the particular route. The longer is the distance, the larger is f. The scale factors here for route 1 and 2 are given respectfully by 1 and 1.7.
+For either one of the routes, one cannot buy a ticket if the average total weight per passenger exceed wC (= 200 Kg).
+Moreover, for route 2, any party carrying life birds is charged an extra amount of 10 tala per bird. There is no such a fee for route 1.
+The following provides ﬁve examples so you can see what your program needs to do. Of course you should also check your program results with those examples.
+
+Your program must match the format and ordering of the displays.
+You must use the menu command in order to choose the route. Note that the chosen route is displayed by the program.
+
+Enter the number of passengers: 2
+Enter the total weight of all passengers and baggage: 50
+Route 1
+Your ticket price is: 90
+
+Enter the number of passengers: 2
+Enter the total weight of all passengers and baggage: 150 
+Route 1
+Your ticket price is: 208
+
+Enter the number of passengers: 3
+Enter the total weight of all passengers and baggage: 330 
+Route 1 
+Your ticket price is: 498
+
+Enter the number of passengers: 2 
+Enter the total weight of all passengers and baggage: 400.001 
+Sorry: too high an average weight to fly on Samoa Air.
+
+Enter the number of passengers: 2 
+Enter the total weight of all passengers and baggage: 150 
+Route 2 
+Enter the total number of pet birds: 5 
+Your ticket price is: 375.6
